@@ -1,0 +1,9 @@
+# Q & A
+## Bookdown作成に失敗した
+> File primate.csl not found in resource path
+ エラー: pandoc document conversion failed with error 99
+ Please delete 修士のススメ.Rmd after you finish debugging the error.
+ 実行が停止されました 
+ 
+ 何のエラーなのかを確認し、修正したのち、Rmdを削除する。
+ この場合、cslファイルが見つからないとあるので、プロジェクト内のcslファイルの名前を確認、修正し、修士のススメ.Rmdを削除する。

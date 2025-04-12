@@ -1,0 +1,48 @@
+--- 
+title: "修士のススメ"
+author: "tabutan"
+date: "`r Sys.Date()`"
+output: 
+  bookdown::gitbook:
+    split_bib: yes  
+    number_sections: true   
+    toc_depth: 4 
+    css: custom_style.css   
+site: bookdown::bookdown_site  
+output_dir: "docs"  
+documentclass: book  
+header-includes:
+   - \usepackage{amsmath}
+   - \usepackage{nccmath}
+bibliography: reference_yakuzaru.bib   
+link-citations: yes
+csl: primates.csl
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE,
+                      warning = FALSE, fig.align = "left",
+                      cache = TRUE)
+```
+
+# 0 はじめに{.unnumbered}
+
+ヤクシマザルに関する知見についてまとめた。まとめるにあたり、[人類進化論研究室](https://jinrui.zool.kyoto-u.ac.jp/FuscataHome/yakuzaru.html)のウェブページ、「屋久島の野生二ホンザル」を参考に構成しました。本サイトで使用したRコードは[GitHub](https://github.com/tabutan/yakuzaru)で閲覧できます。
+
+ヤクシマザルの研究は1952年に川村俊蔵と伊谷純一郎により最初の調査が行われました。その後1976年に丸橋珠樹が、屋久島西部地域で餌付けに頼らずサルにヒトの存在を慣れさせる「人付け」を行い、サルと一緒に遊動して観察できるようにしました[@yamagiwa2008]。それ以来、多くの調査が行われ、現在も継続して行われ、ヤクシマザルの知見が蓄積されてきました。
+
+そこで本稿はニホンザルのことを紹介しつつ、その亜種であるヤクシマザルのことを知ることを目的としています。そのため、まずニホンザル一般の話から始め、それと対比しつつヤクシマザルの特徴について紹介することを基本スタイルとします。<br>
+さらに文献を調べて知識を深めたい人向けに、キーワードとなる専門用語については英語を括弧で書きました。文章の肩に振ってある数字は文末の引用文献番号と対応しています。
+
+ニホンザル
+: ニホンザルは青森県から鹿児島県本土までに生息しているホンドザル（学名：*Macaca fuscata fuscata*）と屋久島に生息しているヤクシマザル（学名：*Macaca fuscata yakui*）の2亜種に分けられる。
+
+---
+
+**¡注意!**<br>
+この文章は筆者がヤクシマザルを中心にニホンザルについてまとめたものですが、第三者による査読を受けていません。筆者は情報について正確に書くように努めていますが、間違いがある可能性もあるのでご注意ください。引用する場合は、各自責任をもって原典に当たって確認してください。
+
+
+
+<!-- なぜか連番途中の引用文献が抜ける -->
+<!-- 引用しているのに引用されていない論文がある -->
