@@ -12,7 +12,7 @@
 
 
 # Bookdownの再現 
-GitHubにある[修士のススメ]()のファイルをすべてダウンロード
+GitHubにある[修士のススメ](https://github.com/tabutan/GetStartedMaster.git)のファイルをすべてダウンロード。
 
 
 
