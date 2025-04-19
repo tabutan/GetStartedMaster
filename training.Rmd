@@ -69,5 +69,32 @@ $N_a$、$N^a$、$N_{修士のススメ参加者}=7$
 
 <!-- 見られたくない、見られたくない -->、無事消えたかな？
 
+## 引用文献
+>ヤクシマザルは他地域のニホンザルより体毛が黒い [\@hamada1992]
 
+ヤクシマザルは他地域のニホンザルより体毛が黒い [@hamada1992]
 
+> ニホンザルの研究はいろいろある [\@hamada1992; \@hikida2022]
+
+ニホンザルの研究はいろいろある [@hamada1992; @hikida2022]
+
+おっと、Hikida 2022の引用文献に問題発生。
+Japanese macaquesにすべきところをjapanese macaquesと表示されているし、種名がイタリックになっていない！
+
+**対処法**
+
+bibファイルの中でHikida 2022に該当する箇所を探す。
+
+>\@article{hikida2022,<br>
+author = {Hikida, K.},<br>
+title = {Eyeblink rate as an indicator of concentration on grooming in Japanese macaques (Macaca fuscata)},<br>
+journal = {American Journal of Primatology},<br>
+volume = {84},<br>
+number = {7},<br>
+pages = {e23392},
+
+title = {xxxxxxx}担っているところをtitle ={{xxxxx}}に変更してみよう。小文字が大文字に変更されているはず。
+
+次に、イタリック。
+
+イタリックにしたい箇所を\\textit{xxxxx}で囲ってみよう。種名がイタリックになっているはず。
