@@ -8,19 +8,17 @@
  何のエラーなのかを確認し、修正したのち、Rmdを削除する。
  この場合、cslファイルが見つからないとあるので、プロジェクト内のcslファイルの名前を確認、修正し、修士のススメ.Rmdを削除する。
  
-## デフォルトと右上のペインにBuildが出てこない
+## デフォルトの右上のペインにBuildが出てこない
  
- 上にあるFile, Edit, Codeなどが並んでいるところの
- Build > Configure Build Toolsを選択
+上にあるFile, Edit, Codeなどが並んでいるところで<br>
+Build > Configure Build Tools<br>
+の順に進む
  
- Project Optionsが出てきたら、
+Project Optionsが出てきたら、<br>
+Project build toolsでWebsiteを選択、<br>
+Book output formats(s)でbook::gitbookを選択しOK。
  
- Project build toolsでWebsiteを選択、
+R Projectをいったん別のものに変更し、元のプロジェクトに戻ると右上ペインにBuildが出現する。<br>
+以後Buildするときは Win + Shift + BでBuild Bookする。
  
- Book output formats(s)でbook::gitbookを選択しOK。
- 
- R Projectをいったん別のものに変更し、戻ると右上ペインにBuildが出現する。
- 
- 以後Buildするときは Win + Shift + BでBuild Bookする。
- 
- このgitbbokはひとつのプロジェクトに一つしか作れないぽい。そのため、レビューとかを作りたいときに使えるかも。
+このgitbbokはひとつのプロジェクトに一つしか作れないぽい。そのため、レビューとかを作りたいときに使えるかも。

@@ -12,8 +12,14 @@
 
 
 # Bookdownの再現 
-GitHubにある[修士のススメ](https://github.com/tabutan/GetStartedMaster.git)のファイルをすべてダウンロード。
+## 練習ファイルのダウンロード
+GitHubにある[修士のススメ](https://github.com/tabutan/GetStartedMaster.git)にある「練習用ファイル一覧」フォルダーをダウンロード。
 
+Knitしてみると、本サイトの「0 はじめに」と同じものが表示されるはずである。
+ここで表示されている内容は[ヤクシマザルという生き物を知りたい](https://tabutan.github.io/yakuzaru/)にあるものと同じものです。
+
+## Build Bookしてみよう
+一応KnitでもHTMLが出現したと思うが、GitBookの場合はエラーの元（例えば、ある章を閲覧できないなど）。Q & AにあるGitBookの立ち上げ方を読み、Build Bookしてみよう。
 
 
 # 文章を書く練習

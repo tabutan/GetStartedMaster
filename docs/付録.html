@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>引用文献 | 修士のススメ</title>
-  <meta name="description" content="引用文献 | 修士のススメ" />
+  <title>5 付録 | 修士のススメ</title>
+  <meta name="description" content="5 付録 | 修士のススメ" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="引用文献 | 修士のススメ" />
+  <meta property="og:title" content="5 付録 | 修士のススメ" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="引用文献 | 修士のススメ" />
+  <meta name="twitter:title" content="5 付録 | 修士のススメ" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="実行環境.html"/>
-
+<link rel="prev" href="q-a.html"/>
+<link rel="next" href="実行環境.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -219,18 +219,59 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="引用文献-1" class="section level1 unnumbered hasAnchor">
-<h1>引用文献<a href="引用文献-1.html#引用文献-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="付録" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> 付録<a href="付録.html#付録" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="rmarkdownの見ため変更" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> RMarkdownの見ため変更<a href="付録.html#rmarkdownの見ため変更" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="デフォルト" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> デフォルト<a href="付録.html#デフォルト" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>デフォルトのRmarkdownをKnitすると以下の図と同じものが再現されるはずである (図 <a href="付録.html#fig:default">5.1</a>)。</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:default"></span>
+<img src="image/RMarkdownDefault.png" alt="RMarkdownのデフォルト" width="946" />
+<p class="caption">
+図5.1: RMarkdownのデフォルト
+</p>
+</div>
+<p>GitBookは１つのプロジェクトで1つだけしか作成できず、GitBookがある状況で、別のRmarkdownをKnitできない。そのため、もし複数のRmarkdownをKnitしたい場合は、GitBookを消す必要がある。</p>
+</div>
+<div id="オプション１" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> オプション１<a href="付録.html#オプション１" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>index.Rmdの一番上にある各種設定のoutputを以下の図 <a href="付録.html#fig:redRMarkdown">5.2</a>と同じになるように注意深く書いてみよう。</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:redRMarkdown"></span>
+<img src="image/RedRMarkdown.png" alt="outputの入力：RMarkdownのオプション1" width="50%" />
+<p class="caption">
+図5.2: outputの入力：RMarkdownのオプション1
+</p>
+</div>
+<p>そうすると、デフォルトのRmarkdownが次のような見た目にKnitできるはずだ（図 <a href="付録.html#fig:readthedown">5.3</a>)。</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:readthedown"></span>
+<img src="image/readthedown.png" alt="RMarkdownのオプション1" width="50%" />
+<p class="caption">
+図5.3: RMarkdownのオプション1
+</p>
+</div>
+<p>見た目がかっこいい。PDFに直さない限りこれで大丈夫。PDFに変換しようとすると見た目が汚くなる。うまくやれる方法があるかもしれないが、わからない（泣）</p>
+</div>
+<div id="オプション２" class="section level3 hasAnchor" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> オプション２<a href="付録.html#オプション２" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>そこでシンプルな見た目だが、PDFでも見やすいRMarkdownを紹介する。
+outputを図 <a href="付録.html#fig:simple">5.4</a>のように変更してみよう。</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:simple"></span>
+<img src="image/simpleRMarkdown.png" alt="outputの入力：RMarkdownのオプション2" width="50%" />
+<p class="caption">
+図5.4: outputの入力：RMarkdownのオプション2
+</p>
+</div>
+<p>そうすると、以下の図 <a href="付録.html#fig:option2">5.5</a>と同じRMarkdownができる。</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:option2"></span>
+<img src="image/option2.png" alt="outputの入力：RMarkdownのオプション2" width="50%" />
+<p class="caption">
+図5.5: outputの入力：RMarkdownのオプション2
+</p>
+</div>
+<p>これは安心してPDFにできる。通学中心置きなく、PCを開かなくてもiPadにPDFを入れてオフライン状況下でも見返せる。レビューとデータ解析を別々のRMarkdownで出力することもできる。
+RMarkdownのオプションは本当に多いが、これが今のところ知っている中で、シンプルかつ便利なものである。</p>
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Hikida K (2022) Eyeblink rate as an indicator of concentration on grooming in japanese macaques (macaca fuscata). American Journal of Primatology 84:e23392. <a href="https://doi.org/10.1002/ajp.23392">https://doi.org/10.1002/ajp.23392</a>
-</div>
-<div class="csl-entry">
-Yamagiwa J (2008) <span class="nocase">History and Present Scope of Field Studies on <em>Macaca fuscata yakui</em> at Yakushima Island, Japan</span>. International Journal of Primatology 29:49–64. <a href="https://doi.org/10.1007/s10764-008-9235-z">https://doi.org/10.1007/s10764-008-9235-z</a>
-</div>
-<div class="csl-entry">
-濱田穣, 渡辺毅, 岩本光雄 (1992) <span>マカク, 特にニホンザル (<em>Macaca fuscata</em>) の体色変異について</span>. 霊長類研究 8:1–23. <a href="https://doi.org/10.2354/psj.8.1">https://doi.org/10.2354/psj.8.1</a>
 </div>
 </div>
 </div>
@@ -239,8 +280,8 @@ Yamagiwa J (2008) <span class="nocase">History and Present Scope of Field Studie
           </div>
         </div>
       </div>
-<a href="実行環境.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="q-a.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="実行環境.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,6 +1,6 @@
 --- 
 title: "修士のススメ"
-author: "tabutan"
+author: "あいうえおんがく"
 date: "`r Sys.Date()`"
 output: 
   bookdown::gitbook:
@@ -14,7 +14,7 @@ documentclass: book
 header-includes:
    - \usepackage{amsmath}
    - \usepackage{nccmath}
-bibliography: referenceGetStertedMaster.bib 
+bibliography: referenceGetStertedMaster.bib  
 link-citations: yes
 csl: primates.csl
 ---
@@ -24,7 +24,6 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE,
                       warning = FALSE, fig.align = "left",
                       cache = TRUE)
 ```
-
 
 # 0 はじめに{.unnumbered}
 

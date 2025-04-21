@@ -1,8 +1,15 @@
+fig:default
+fig:redRMarkdown
+fig:readthedown
+fig:simple
+fig:option2
 章立てをする
 節
 項
 次
 bookdownの再現
+練習ファイルのダウンロード
+build-bookしてみよう
 文章を書く練習
 太字イタリック
 箇条書き
@@ -12,4 +19,9 @@ bookdownの再現
 引用文献
 q-a
 bookdown作成に失敗した
-デフォルトと右上のペインにbuildが出てこない
+デフォルトの右上のペインにbuildが出てこない
+付録
+rmarkdownの見ため変更
+デフォルト
+オプション１
+オプション２

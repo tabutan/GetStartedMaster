@@ -1,9 +1,6 @@
 book_filename: "修士のススメ"  
 rmd_files:                    
   - index.Rmd
-  - training.Rmd
-  - QuestionAnswer.Rmd
-  - Appendix.Rmd
   - sessioninfo.Rmd
 output_dir: "docs"  
 language:
