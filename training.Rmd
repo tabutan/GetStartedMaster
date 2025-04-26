@@ -119,12 +119,12 @@ __ぽよよん__
 箇条書きの中の箇条書き：tabキー押して、半角でマイナス記号、半角スペース
 
 > \- 箇条書き<br>
-  \- 修士向け<br>
-  \- 知らなくても大丈夫<br>
-  \- のんびりできないし<br>
-  \- すんなりいかない<br>
-  \- スケジュール<br>
-  \- 目指せRマスター<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;\- 修士向け<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;\- 知らなくても大丈夫<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;\- のんびりできないし<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;\- すんなりいかない<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;\- スケジュール<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;\- 目指せRマスター<br>
 
 - 箇条書き
   - 修士向け
@@ -138,12 +138,12 @@ __ぽよよん__
 数字でもできる。
 
 > \- 箇条書き<br>
-  1. 修士向け<br>
-  1. 知らなくても大丈夫<br>
-  1. のんびりできないし<br>
-  1. すんなりいかない<br>
-  1. スケジュール<br>
-  1. 目指せRマスター<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;1. 修士向け<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;1. 知らなくても大丈夫<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;1. のんびりできないし<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;1. すんなりいかない<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;1. スケジュール<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;1. 目指せRマスター<br>
 
 - 箇条書き
   1. 修士向け
