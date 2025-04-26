@@ -33,7 +33,7 @@ Knitしてみると、本サイトの「0 はじめに」と同じものが表�
 ここで表示されている内容は「[ヤクシマザルという生き物を知りたい](https://tabutan.github.io/yakuzaru/)」にあるものと同じものです。
 
 ### 言語設定をUTF-８にする
-言語設定によっては日本語がバグの原因となり、日本語の部分が後で何を書いたのかわからなくなる。 必ずUTF-8にすること。UTF-8で指定しないとコードの日本語がすべて文字化けしてしまう(T_T)
+言語設定によっては日本語がバグの原因となり、日本語の部分が後で何を書いたのかわからなくなる。 必ずUTF-8にすること。UTF-8で指定しないとコードの日本語がすべて文字化けしてしまう(T_T)<br>
 設定方法は、一番上にFile Edit View・・・と並んでいるところのToolsを選択し、
 
 Tools > Global Options > Code > Saving
@@ -99,10 +99,10 @@ __ぽよよん__
 
 > \*italic\*、\_italic\_、\*字体によってイタリックに見えないものあり！\*<br>
 霊長類の雑誌は、<br>
-*Primates*<br>
-*International Journal of Primatology*<br>
-*American Journal of Primatology*<br>
-*Folia Primatologica*<br>
+\*Primates\*<br>
+\*International Journal of Primatology\*<br>
+\*American Journal of Primatology\*<br>
+\*Folia Primatologica\*<br>
 の４つ。
 
 *italic*、_italic_、*字体によってイタリックに見えないものあり！*
