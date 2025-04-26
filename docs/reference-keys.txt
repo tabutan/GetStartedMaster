@@ -10,6 +10,7 @@ fig:option2
 rでprojectを立ち上げる
 bookdownの再現
 練習ファイルのダウンロード
+言語設定をutf-８にする
 build-bookしてみよう
 新しいrmarkdownファイルを作成
 章立てをする

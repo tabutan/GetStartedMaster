@@ -32,6 +32,16 @@ knitr::include_graphics("image/filedownroad.png")
 Knitしてみると、本サイトの「0 はじめに」と同じものが表示されるはずである。
 ここで表示されている内容は「[ヤクシマザルという生き物を知りたい](https://tabutan.github.io/yakuzaru/)」にあるものと同じものです。
 
+### 言語設定をUTF-８にする
+言語設定によっては日本語がバグの原因となり、日本語の部分が後で何を書いたのかわからなくなる。 必ずUTF-8にすること。UTF-8で指定しないとコードの日本語がすべて文字化けしてしまう(T_T)
+設定方法は、一番上にFile Edit View・・・と並んでいるところのToolsを選択し、
+
+Tools > Global Options > Code > Saving
+
+と進み、真ん中にあるDefault text encoddingでUTF-8を指定。
+
+Applyをクリックし、OKをクリックして閉じる。
+
 ### Build Bookしてみよう
 一応KnitでもHTMLが出現したと思うが、GitBookの場合はエラーの元（例えば、ある章を閲覧できないなど）。Q & AにあるGitBookの立ち上げ方を読み、Build Bookしてみよう。
 

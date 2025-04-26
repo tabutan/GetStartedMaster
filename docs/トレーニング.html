@@ -167,7 +167,8 @@ div.csl-indent {
 <li class="chapter" data-level="1.3" data-path="トレーニング.html"><a href="トレーニング.html#bookdownの再現"><i class="fa fa-check"></i><b>1.3</b> Bookdownの再現</a>
 <ul>
 <li class="chapter" data-level="1.3.1" data-path="トレーニング.html"><a href="トレーニング.html#練習ファイルのダウンロード"><i class="fa fa-check"></i><b>1.3.1</b> 練習ファイルのダウンロード</a></li>
-<li class="chapter" data-level="1.3.2" data-path="トレーニング.html"><a href="トレーニング.html#build-bookしてみよう"><i class="fa fa-check"></i><b>1.3.2</b> Build Bookしてみよう</a></li>
+<li class="chapter" data-level="1.3.2" data-path="トレーニング.html"><a href="トレーニング.html#言語設定をutf-８にする"><i class="fa fa-check"></i><b>1.3.2</b> 言語設定をUTF-８にする</a></li>
+<li class="chapter" data-level="1.3.3" data-path="トレーニング.html"><a href="トレーニング.html#build-bookしてみよう"><i class="fa fa-check"></i><b>1.3.3</b> Build Bookしてみよう</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="トレーニング.html"><a href="トレーニング.html#新しいrmarkdownファイルを作成"><i class="fa fa-check"></i><b>1.4</b> 新しいRmarkdownファイルを作成</a></li>
 <li class="chapter" data-level="1.5" data-path="トレーニング.html"><a href="トレーニング.html#章立てをする"><i class="fa fa-check"></i><b>1.5</b> 章立てをする</a>
@@ -255,8 +256,16 @@ New Directory &gt; New Project<br>
 <p>Knitしてみると、本サイトの「0 はじめに」と同じものが表示されるはずである。
 ここで表示されている内容は「<a href="https://tabutan.github.io/yakuzaru/">ヤクシマザルという生き物を知りたい</a>」にあるものと同じものです。</p>
 </div>
-<div id="build-bookしてみよう" class="section level3 hasAnchor" number="1.3.2">
-<h3><span class="header-section-number">1.3.2</span> Build Bookしてみよう<a href="トレーニング.html#build-bookしてみよう" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="言語設定をutf-８にする" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> 言語設定をUTF-８にする<a href="トレーニング.html#言語設定をutf-８にする" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>言語設定によっては日本語がバグの原因となり、日本語の部分が後で何を書いたのかわからなくなる。 必ずUTF-8にすること。UTF-8で指定しないとコードの日本語がすべて文字化けしてしまう(T_T)
+設定方法は、一番上にFile Edit View・・・と並んでいるところのToolsを選択し、</p>
+<p>Tools &gt; Global Options &gt; Code &gt; Saving</p>
+<p>と進み、真ん中にあるDefault text encoddingでUTF-8を指定。</p>
+<p>Applyをクリックし、OKをクリックして閉じる。</p>
+</div>
+<div id="build-bookしてみよう" class="section level3 hasAnchor" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Build Bookしてみよう<a href="トレーニング.html#build-bookしてみよう" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>一応KnitでもHTMLが出現したと思うが、GitBookの場合はエラーの元（例えば、ある章を閲覧できないなど）。Q &amp; AにあるGitBookの立ち上げ方を読み、Build Bookしてみよう。</p>
 </div>
 </div>
