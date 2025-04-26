@@ -1,4 +1,5 @@
 fig:downroad
+fig:mpg
 fig:default
 fig:redRMarkdown
 fig:readthedown

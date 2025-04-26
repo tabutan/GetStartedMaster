@@ -433,7 +433,8 @@ HP上は￥のマークになっているが、Ｒコード上はバックスラ
 </div>
 <div id="rコードを書く" class="section level2 hasAnchor" number="1.7">
 <h2><span class="header-section-number">1.7</span> Rコードを書く<a href="トレーニング.html#rコードを書く" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>「ctrl + alt + I」のショートカットキーを使うと、Rコードを入力するための灰色の領域が表示される。</p>
+<p>「ctrl + alt + I」のショートカットキーを使うと、Rコードを入力するための灰色の領域が表示される。<br>
+Rに内蔵されているmpgデータを使って図示できただろうか（図 <a href="トレーニング.html#fig:mpg">1.2</a>）。</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="トレーニング.html#cb1-1" tabindex="-1"></a><span class="co"># パッケージの読み込み</span></span>
 <span id="cb1-2"><a href="トレーニング.html#cb1-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-3"><a href="トレーニング.html#cb1-3" tabindex="-1"></a></span>
@@ -441,7 +442,12 @@ HP上は￥のマークになっているが、Ｒコード上はバックスラ
 <span id="cb1-5"><a href="トレーニング.html#cb1-5" tabindex="-1"></a><span class="do">## Rに内蔵されているmpgデータを使って図示</span></span>
 <span id="cb1-6"><a href="トレーニング.html#cb1-6" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg, <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
 <span id="cb1-7"><a href="トレーニング.html#cb1-7" tabindex="-1"></a>    <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="%E4%BF%AE%E5%A3%AB%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:mpg"></span>
+<img src="%E4%BF%AE%E5%A3%AB%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1_files/figure-html/mpg-1.png" alt="mpgデータの図示" width="672" />
+<p class="caption">
+図1.2: mpgデータの図示
+</p>
+</div>
 
 </div>
 </div>
