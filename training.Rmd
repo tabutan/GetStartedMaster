@@ -195,3 +195,19 @@ title = {xxxxxxx}になっているところをtitle ={{xxxxx}}に変更して�
 
 イタリックにしたい箇所であるMacaca fuscataを\\textit{Macaca fuscata}というように書いてみよう。種名がイタリックになっているはず。
 HP上は￥のマークになっているが、Ｒコード上はバックスラッシュであることに注意。
+
+
+## Rコードを書く
+
+「ctrl + alt + I」のショートカットキーを使うと、Rコードを入力するための灰色の領域が表示される。
+
+```{r}
+# パッケージの読み込み
+library(tidyverse)
+
+# 図示
+## Rに内蔵されているmpgデータを使って図示
+ggplot(data = mpg, aes(x = displ, y = hwy)) +
+    geom_point()
+```
+
