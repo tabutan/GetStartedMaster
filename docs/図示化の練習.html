@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 図示化の練習 | 修士のススメ</title>
+  <meta name="description" content="2 図示化の練習 | 修士のススメ" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 図示化の練習 | 修士のススメ" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 図示化の練習 | 修士のススメ" />
+  
+  
+  
+
+<meta name="author" content="tabutan" />
+
+
+<meta name="date" content="2025-04-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="rmarkdownの練習.html"/>
+<link rel="next" href="q-a.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="custom_style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>0 はじめに</a></li>
+<li class="chapter" data-level="1" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html"><i class="fa fa-check"></i><b>1</b> Rmarkdownの練習</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#デスクトップにフォルダーを作る"><i class="fa fa-check"></i><b>1.1</b> デスクトップにフォルダーを作る</a></li>
+<li class="chapter" data-level="1.2" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#rでprojectを立ち上げる"><i class="fa fa-check"></i><b>1.2</b> RでProjectを立ち上げる</a></li>
+<li class="chapter" data-level="1.3" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#bookdownの再現"><i class="fa fa-check"></i><b>1.3</b> Bookdownの再現</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#練習ファイルのダウンロード"><i class="fa fa-check"></i><b>1.3.1</b> 練習ファイルのダウンロード</a></li>
+<li class="chapter" data-level="1.3.2" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#言語設定をutf-８にする"><i class="fa fa-check"></i><b>1.3.2</b> 言語設定をUTF-８にする</a></li>
+<li class="chapter" data-level="1.3.3" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#build-bookしてみよう"><i class="fa fa-check"></i><b>1.3.3</b> Build Bookしてみよう</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#新しいrmarkdownファイルを作成"><i class="fa fa-check"></i><b>1.4</b> 新しいRmarkdownファイルを作成</a></li>
+<li class="chapter" data-level="1.5" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#章立てをする"><i class="fa fa-check"></i><b>1.5</b> 章立てをする</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#わっしょい"><i class="fa fa-check"></i><b>1.5.1</b> わっしょい</a>
+<ul>
+<li class="chapter" data-level="1.5.1.1" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#ほいさほいさ"><i class="fa fa-check"></i><b>1.5.1.1</b> ほいさほいさ</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#文章を書く"><i class="fa fa-check"></i><b>1.6</b> 文章を書く</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#太字イタリック"><i class="fa fa-check"></i><b>1.6.1</b> 太字、イタリック</a></li>
+<li class="chapter" data-level="1.6.2" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#箇条書き"><i class="fa fa-check"></i><b>1.6.2</b> 箇条書き</a></li>
+<li class="chapter" data-level="1.6.3" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#数式"><i class="fa fa-check"></i><b>1.6.3</b> 数式</a>
+<ul>
+<li class="chapter" data-level="1.6.3.1" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#下付き文字上付き文字"><i class="fa fa-check"></i><b>1.6.3.1</b> 下付き文字、上付き文字</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6.4" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#コメントアウト"><i class="fa fa-check"></i><b>1.6.4</b> コメントアウト</a></li>
+<li class="chapter" data-level="1.6.5" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#引用文献"><i class="fa fa-check"></i><b>1.6.5</b> 引用文献</a>
+<ul>
+<li class="chapter" data-level="1.6.5.1" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#よくある引用トラブル1"><i class="fa fa-check"></i><b>1.6.5.1</b> よくある引用トラブル1</a></li>
+<li class="chapter" data-level="1.6.5.2" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#よくある引用トラブル2"><i class="fa fa-check"></i><b>1.6.5.2</b> よくある引用トラブル2</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#引用文献スタイルを変更する"><i class="fa fa-check"></i><b>1.7</b> 引用文献スタイルを変更する</a></li>
+<li class="chapter" data-level="1.8" data-path="rmarkdownの練習.html"><a href="rmarkdownの練習.html#rコードを書く"><i class="fa fa-check"></i><b>1.8</b> Rコードを書く</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="図示化の練習.html"><a href="図示化の練習.html"><i class="fa fa-check"></i><b>2</b> 図示化の練習</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="図示化の練習.html"><a href="図示化の練習.html#第２章の練習"><i class="fa fa-check"></i><b>2.1</b> 第２章の練習</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="図示化の練習.html"><a href="図示化の練習.html#csvファイルの読込み保存"><i class="fa fa-check"></i><b>2.1.1</b> csvファイルの読込み・保存</a></li>
+<li class="chapter" data-level="2.1.2" data-path="図示化の練習.html"><a href="図示化の練習.html#早速図示してみよう"><i class="fa fa-check"></i><b>2.1.2</b> 早速図示してみよう！</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="図示化の練習.html"><a href="図示化の練習.html#第３章の練習"><i class="fa fa-check"></i><b>2.2</b> 第３章の練習</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="図示化の練習.html"><a href="図示化の練習.html#グループ分けして図示"><i class="fa fa-check"></i><b>2.2.1</b> グループ分けして図示</a>
+<ul>
+<li class="chapter" data-level="2.2.1.1" data-path="図示化の練習.html"><a href="図示化の練習.html#離散値"><i class="fa fa-check"></i><b>2.2.1.1</b> 離散値</a></li>
+<li class="chapter" data-level="2.2.1.2" data-path="図示化の練習.html"><a href="図示化の練習.html#連続値"><i class="fa fa-check"></i><b>2.2.1.2</b> 連続値</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="図示化の練習.html"><a href="図示化の練習.html#第４章の練習"><i class="fa fa-check"></i><b>2.3</b> 第４章の練習</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="q-a.html"><a href="q-a.html"><i class="fa fa-check"></i><b>3</b> Q &amp; A</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="q-a.html"><a href="q-a.html#bookdown作成に失敗した"><i class="fa fa-check"></i><b>3.1</b> Bookdown作成に失敗した</a></li>
+<li class="chapter" data-level="3.2" data-path="q-a.html"><a href="q-a.html#デフォルトの右上のペインにbuildが出てこない"><i class="fa fa-check"></i><b>3.2</b> デフォルトの右上のペインにBuildが出てこない</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="付録.html"><a href="付録.html"><i class="fa fa-check"></i><b>4</b> 付録</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="付録.html"><a href="付録.html#rmarkdownの見ため変更"><i class="fa fa-check"></i><b>4.1</b> RMarkdownの見ため変更</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="付録.html"><a href="付録.html#デフォルト"><i class="fa fa-check"></i><b>4.1.1</b> デフォルト</a></li>
+<li class="chapter" data-level="4.1.2" data-path="付録.html"><a href="付録.html#オプション１"><i class="fa fa-check"></i><b>4.1.2</b> オプション１</a></li>
+<li class="chapter" data-level="4.1.3" data-path="付録.html"><a href="付録.html#オプション２"><i class="fa fa-check"></i><b>4.1.3</b> オプション２</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="実行環境.html"><a href="実行環境.html"><i class="fa fa-check"></i>実行環境</a></li>
+<li class="chapter" data-level="" data-path="引用文献-1.html"><a href="引用文献-1.html"><i class="fa fa-check"></i>引用文献</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">修士のススメ</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="図示化の練習" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> 図示化の練習<a href="図示化の練習.html#図示化の練習" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>ネットで公開されている<a href="https://socviz.co/index.html"><em>Data Visualization</em></a>を参考に、Rのggplotを用いた図示化をやってみよう。邦訳本は『データ分析のためのデータ可視化入門』。<br>
+序文、第1章には、なぜ図示化する必要があるのか、図示化する際の注意点が丁寧に書かれているので、読むとよい。</p>
+<p><strong>図示化するにあたって</strong>
+<em>Data Visualization</em>の序文に書いてある図示する際に必要となるパッケージをダウンロードしよう。</p>
+<div id="第２章の練習" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> 第２章の練習<a href="図示化の練習.html#第２章の練習" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="csvファイルの読込み保存" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> csvファイルの読込み・保存<a href="図示化の練習.html#csvファイルの読込み保存" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>＠第２章
+csvファイルとは、カンマ区切りで情報が整理されたファイルのことで、見た目はExcelファイルに近い。</p>
+<p>第２章に書かれているcsvファイルを保存してみましょう。
+まず、csvという名前でR Projectと同じレイヤーでフォルダーを作成してください。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="図示化の練習.html#cb2-1" tabindex="-1"></a><span class="co"># パッケージの読込み</span></span>
+<span id="cb2-2"><a href="図示化の練習.html#cb2-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-3"><a href="図示化の練習.html#cb2-3" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb2-4"><a href="図示化の練習.html#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="図示化の練習.html#cb2-5" tabindex="-1"></a><span class="co"># 公開されている臓器提供に関するcsvファイルをダウンロード</span></span>
+<span id="cb2-6"><a href="図示化の練習.html#cb2-6" tabindex="-1"></a><span class="do">## ダウンロードしたcsvに名前を付ける</span></span>
+<span id="cb2-7"><a href="図示化の練習.html#cb2-7" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">&quot;https://cdn.rawgit.com/kjhealy/viz-organdata/master/organdonation.csv&quot;</span></span>
+<span id="cb2-8"><a href="図示化の練習.html#cb2-8" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="図示化の練習.html#cb2-9" tabindex="-1"></a><span class="co"># csvファイルの読込み</span></span>
+<span id="cb2-10"><a href="図示化の練習.html#cb2-10" tabindex="-1"></a><span class="do">## 「&lt;-」のショートカットは「alt + -」 </span></span>
+<span id="cb2-11"><a href="図示化の練習.html#cb2-11" tabindex="-1"></a>df_donor <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(url)</span>
+<span id="cb2-12"><a href="図示化の練習.html#cb2-12" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="図示化の練習.html#cb2-13" tabindex="-1"></a><span class="co"># csvファイルとして保存</span></span>
+<span id="cb2-14"><a href="図示化の練習.html#cb2-14" tabindex="-1"></a><span class="do">## 書きかた１</span></span>
+<span id="cb2-15"><a href="図示化の練習.html#cb2-15" tabindex="-1"></a><span class="fu">write_csv</span>(df_donor, <span class="fu">here</span>(<span class="st">&quot;csv&quot;</span>, <span class="st">&quot;donor.csv&quot;</span>))</span>
+<span id="cb2-16"><a href="図示化の練習.html#cb2-16" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="図示化の練習.html#cb2-17" tabindex="-1"></a><span class="do">## 書きかた２</span></span>
+<span id="cb2-18"><a href="図示化の練習.html#cb2-18" tabindex="-1"></a><span class="do">### スラッシュはフォルダーレイヤーを表す。</span></span>
+<span id="cb2-19"><a href="図示化の練習.html#cb2-19" tabindex="-1"></a><span class="do">### この場合、csvフォルダーの中にdonor.csvを作るように指示</span></span>
+<span id="cb2-20"><a href="図示化の練習.html#cb2-20" tabindex="-1"></a><span class="fu">write_csv</span>(df_donor, <span class="st">&quot;csv/donor.csv&quot;</span>)</span></code></pre></div>
+<p>gampminderの読込みがうまくできない場合、R Studioの左下パネルにあるConsoleで<br>
+install.packages(“gapminder”)<br>
+と入力してから読み込む。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="図示化の練習.html#cb3-1" tabindex="-1"></a><span class="fu">library</span>(gapminder)</span>
+<span id="cb3-2"><a href="図示化の練習.html#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="図示化の練習.html#cb3-3" tabindex="-1"></a><span class="co"># view関数は無記名の確認したいデータ内容を表示できる</span></span>
+<span id="cb3-4"><a href="図示化の練習.html#cb3-4" tabindex="-1"></a><span class="fu">view</span>(gapminder)</span></code></pre></div>
+<p>gapminderは各国の平均寿命やGDP、人口のデータが格納されている。</p>
+</div>
+<div id="早速図示してみよう" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> 早速図示してみよう！<a href="図示化の練習.html#早速図示してみよう" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="図示化の練習.html#cb4-1" tabindex="-1"></a>       <span class="co"># 「data = 」は省略可</span></span>
+<span id="cb4-2"><a href="図示化の練習.html#cb4-2" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder,</span>
+<span id="cb4-3"><a href="図示化の練習.html#cb4-3" tabindex="-1"></a>       <span class="co"># 「mapping = 」も省略可</span></span>
+<span id="cb4-4"><a href="図示化の練習.html#cb4-4" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap,</span>
+<span id="cb4-5"><a href="図示化の練習.html#cb4-5" tabindex="-1"></a>           <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="図示化の練習.html#cb4-6" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="%E4%BF%AE%E5%A3%AB%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto auto auto 0;" />
+これがデフォルトでの表示。データの傾向を見るだけならば悪くない。</p>
+</div>
+</div>
+<div id="第３章の練習" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> 第３章の練習<a href="図示化の練習.html#第３章の練習" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>散布図の上に、散布図に基づいた曲線を当てはめてみよう。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="図示化の練習.html#cb5-1" tabindex="-1"></a>　　　 <span class="co"># 「data = 」は省略可</span></span>
+<span id="cb5-2"><a href="図示化の練習.html#cb5-2" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder,</span>
+<span id="cb5-3"><a href="図示化の練習.html#cb5-3" tabindex="-1"></a>       <span class="co"># 「mapping = 」も省略可</span></span>
+<span id="cb5-4"><a href="図示化の練習.html#cb5-4" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap,</span>
+<span id="cb5-5"><a href="図示化の練習.html#cb5-5" tabindex="-1"></a>           <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
+<span id="cb5-6"><a href="図示化の練習.html#cb5-6" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb5-7"><a href="図示化の練習.html#cb5-7" tabindex="-1"></a>  <span class="co"># gam: Generalized Additive Model (GAM)、一般化加法モデル</span></span>
+<span id="cb5-8"><a href="図示化の練習.html#cb5-8" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;gam&quot;</span>)</span></code></pre></div>
+<p><img src="%E4%BF%AE%E5%A3%AB%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p>散布図と曲線を表示できた。GAMの詳細はとりあえずわからなくて大丈夫。</p>
+<p>次にGDPに対数を取って表示してみよう。</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="図示化の練習.html#cb6-1" tabindex="-1"></a>　　　 <span class="co"># 「data = 」は省略可</span></span>
+<span id="cb6-2"><a href="図示化の練習.html#cb6-2" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder,</span>
+<span id="cb6-3"><a href="図示化の練習.html#cb6-3" tabindex="-1"></a>       <span class="co"># 「mapping = 」も省略可</span></span>
+<span id="cb6-4"><a href="図示化の練習.html#cb6-4" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap,</span>
+<span id="cb6-5"><a href="図示化の練習.html#cb6-5" tabindex="-1"></a>           <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="図示化の練習.html#cb6-6" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb6-7"><a href="図示化の練習.html#cb6-7" tabindex="-1"></a>  <span class="co"># lm: Linear Model (LM)、線形モデル</span></span>
+<span id="cb6-8"><a href="図示化の練習.html#cb6-8" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>) <span class="sc">+</span></span>
+<span id="cb6-9"><a href="図示化の練習.html#cb6-9" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>()</span></code></pre></div>
+<p><img src="%E4%BF%AE%E5%A3%AB%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto auto auto 0;" />
+いい感じ。LMの詳細は分からなくて大丈夫。</p>
+<p>図を整形してみよう。
+まずは散布図と回帰直線。そして、軸タイトル。</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="図示化の練習.html#cb7-1" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder,</span>
+<span id="cb7-2"><a href="図示化の練習.html#cb7-2" tabindex="-1"></a>       <span class="co"># 「mapping = 」も省略可</span></span>
+<span id="cb7-3"><a href="図示化の練習.html#cb7-3" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap,</span>
+<span id="cb7-4"><a href="図示化の練習.html#cb7-4" tabindex="-1"></a>           <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
+<span id="cb7-5"><a href="図示化の練習.html#cb7-5" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">1.5</span>,         　<span class="co"># 色の濃度指定</span></span>
+<span id="cb7-6"><a href="図示化の練習.html#cb7-6" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">&quot;deepskyblue&quot;</span>, <span class="co"># 色指定</span></span>
+<span id="cb7-7"><a href="図示化の練習.html#cb7-7" tabindex="-1"></a>             <span class="at">shape =</span> <span class="dv">4</span>) <span class="sc">+</span>　　　　　 <span class="co"># 散布図の記号指定　</span></span>
+<span id="cb7-8"><a href="図示化の練習.html#cb7-8" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>,           <span class="co"># lm: Linear Model (LM)、線形モデル</span></span>
+<span id="cb7-9"><a href="図示化の練習.html#cb7-9" tabindex="-1"></a>              <span class="at">fill =</span> <span class="st">&quot;lightblue&quot;</span>,      <span class="co"># 95%信用区間の色指定</span></span>
+<span id="cb7-10"><a href="図示化の練習.html#cb7-10" tabindex="-1"></a>              <span class="at">color =</span> <span class="st">&quot;deepskyblue&quot;</span>,   <span class="co"># 回帰直線の色指定</span></span>
+<span id="cb7-11"><a href="図示化の練習.html#cb7-11" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.7</span>,</span>
+<span id="cb7-12"><a href="図示化の練習.html#cb7-12" tabindex="-1"></a>              <span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span>　　　　　　<span class="co"># 記号のサイズ指定</span></span>
+<span id="cb7-13"><a href="図示化の練習.html#cb7-13" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>(<span class="at">labels =</span> scales<span class="sc">::</span>dollar) <span class="sc">+</span> <span class="co"># ドル表示に変更</span></span>
+<span id="cb7-14"><a href="図示化の練習.html#cb7-14" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;一人当たりの国内総生産&quot;</span>,</span>
+<span id="cb7-15"><a href="図示化の練習.html#cb7-15" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;平均寿命&quot;</span>)</span></code></pre></div>
+<p><img src="%E4%BF%AE%E5%A3%AB%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p>ggpubr（じーじーぱぶあーる）パッケージをダウンロード、読込み、論文形式の図に整形しよう。</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="図示化の練習.html#cb8-1" tabindex="-1"></a><span class="fu">library</span>(ggpubr) <span class="co"># 論文掲載用に設計されたパッケージ</span></span>
+<span id="cb8-2"><a href="図示化の練習.html#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="図示化の練習.html#cb8-3" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder,</span>
+<span id="cb8-4"><a href="図示化の練習.html#cb8-4" tabindex="-1"></a>       <span class="co"># 「mapping = 」も省略可</span></span>
+<span id="cb8-5"><a href="図示化の練習.html#cb8-5" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap,</span>
+<span id="cb8-6"><a href="図示化の練習.html#cb8-6" tabindex="-1"></a>           <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
+<span id="cb8-7"><a href="図示化の練習.html#cb8-7" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">1.5</span>,         　<span class="co"># 色の濃度指定</span></span>
+<span id="cb8-8"><a href="図示化の練習.html#cb8-8" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">&quot;deepskyblue&quot;</span>, <span class="co"># 色指定</span></span>
+<span id="cb8-9"><a href="図示化の練習.html#cb8-9" tabindex="-1"></a>             <span class="at">shape =</span> <span class="dv">4</span>) <span class="sc">+</span>　　　　　 <span class="co"># 散布図の記号指定　</span></span>
+<span id="cb8-10"><a href="図示化の練習.html#cb8-10" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>,           <span class="co"># lm: Linear Model (LM)、線形モデル</span></span>
+<span id="cb8-11"><a href="図示化の練習.html#cb8-11" tabindex="-1"></a>              <span class="at">fill =</span> <span class="st">&quot;lightblue&quot;</span>,      <span class="co"># 95%信用区間の色指定</span></span>
+<span id="cb8-12"><a href="図示化の練習.html#cb8-12" tabindex="-1"></a>              <span class="at">color =</span> <span class="st">&quot;deepskyblue&quot;</span>,   <span class="co"># 回帰直線の色指定</span></span>
+<span id="cb8-13"><a href="図示化の練習.html#cb8-13" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.7</span>,</span>
+<span id="cb8-14"><a href="図示化の練習.html#cb8-14" tabindex="-1"></a>              <span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span>　　　　　　<span class="co"># 記号のサイズ指定</span></span>
+<span id="cb8-15"><a href="図示化の練習.html#cb8-15" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>(<span class="at">labels =</span> scales<span class="sc">::</span>dollar) <span class="sc">+</span> <span class="co"># ドル表示に変更</span></span>
+<span id="cb8-16"><a href="図示化の練習.html#cb8-16" tabindex="-1"></a>  <span class="fu">theme_pubr</span>() <span class="sc">+</span>　<span class="co"># 無地背景に指定</span></span>
+<span id="cb8-17"><a href="図示化の練習.html#cb8-17" tabindex="-1"></a>  <span class="fu">labs_pubr</span>() <span class="sc">+</span>   <span class="co"># 軸タイトルのフォントとサイズを指定</span></span>
+<span id="cb8-18"><a href="図示化の練習.html#cb8-18" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;一人当たりの国内総生産&quot;</span>,</span>
+<span id="cb8-19"><a href="図示化の練習.html#cb8-19" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;平均寿命&quot;</span>)</span></code></pre></div>
+<p><img src="%E4%BF%AE%E5%A3%AB%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto auto auto 0;" />
+結構、論文形式ぽくなった。個人的には、補助線が欲しいので、theme_pubr()からtheme_bw()に変更する。</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="図示化の練習.html#cb9-1" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder,</span>
+<span id="cb9-2"><a href="図示化の練習.html#cb9-2" tabindex="-1"></a>       <span class="co"># 「mapping = 」も省略可</span></span>
+<span id="cb9-3"><a href="図示化の練習.html#cb9-3" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap,</span>
+<span id="cb9-4"><a href="図示化の練習.html#cb9-4" tabindex="-1"></a>           <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
+<span id="cb9-5"><a href="図示化の練習.html#cb9-5" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">1.5</span>,         　<span class="co"># 色の濃度指定</span></span>
+<span id="cb9-6"><a href="図示化の練習.html#cb9-6" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">&quot;deepskyblue&quot;</span>, <span class="co"># 色指定</span></span>
+<span id="cb9-7"><a href="図示化の練習.html#cb9-7" tabindex="-1"></a>             <span class="at">shape =</span> <span class="dv">4</span>) <span class="sc">+</span>　　　　　 <span class="co"># 散布図の記号指定　</span></span>
+<span id="cb9-8"><a href="図示化の練習.html#cb9-8" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>,           <span class="co"># lm: Linear Model (LM)、線形モデル</span></span>
+<span id="cb9-9"><a href="図示化の練習.html#cb9-9" tabindex="-1"></a>              <span class="at">fill =</span> <span class="st">&quot;lightblue&quot;</span>,      <span class="co"># 95%信用区間の色指定</span></span>
+<span id="cb9-10"><a href="図示化の練習.html#cb9-10" tabindex="-1"></a>              <span class="at">color =</span> <span class="st">&quot;deepskyblue&quot;</span>,   <span class="co"># 回帰直線の色指定</span></span>
+<span id="cb9-11"><a href="図示化の練習.html#cb9-11" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.7</span>,</span>
+<span id="cb9-12"><a href="図示化の練習.html#cb9-12" tabindex="-1"></a>              <span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span>　　　　　　<span class="co"># 記号のサイズ指定</span></span>
+<span id="cb9-13"><a href="図示化の練習.html#cb9-13" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>(<span class="at">labels =</span> scales<span class="sc">::</span>dollar) <span class="sc">+</span> <span class="co"># ドル表示に変更</span></span>
+<span id="cb9-14"><a href="図示化の練習.html#cb9-14" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>　<span class="co"># 白地罫線に指定</span></span>
+<span id="cb9-15"><a href="図示化の練習.html#cb9-15" tabindex="-1"></a>  <span class="fu">labs_pubr</span>() <span class="sc">+</span>   <span class="co"># 軸タイトルのフォントとサイズを指定</span></span>
+<span id="cb9-16"><a href="図示化の練習.html#cb9-16" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;一人当たりの国内総生産&quot;</span>,</span>
+<span id="cb9-17"><a href="図示化の練習.html#cb9-17" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;平均寿命&quot;</span>)</span></code></pre></div>
+<p><img src="%E4%BF%AE%E5%A3%AB%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<div id="グループ分けして図示" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> グループ分けして図示<a href="図示化の練習.html#グループ分けして図示" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="離散値" class="section level4 hasAnchor" number="2.2.1.1">
+<h4><span class="header-section-number">2.2.1.1</span> 離散値<a href="図示化の練習.html#離散値" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>実はこれまでの図は、ちがうデータを一色淡にして表示していた。これを大陸ごとに分けて表示するとどうなるだろう。</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="図示化の練習.html#cb10-1" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder,</span>
+<span id="cb10-2"><a href="図示化の練習.html#cb10-2" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap,</span>
+<span id="cb10-3"><a href="図示化の練習.html#cb10-3" tabindex="-1"></a>           <span class="at">y =</span> lifeExp,</span>
+<span id="cb10-4"><a href="図示化の練習.html#cb10-4" tabindex="-1"></a>           <span class="at">color =</span> continent,</span>
+<span id="cb10-5"><a href="図示化の練習.html#cb10-5" tabindex="-1"></a>           <span class="at">fill =</span> continent)) <span class="sc">+</span> </span>
+<span id="cb10-6"><a href="図示化の練習.html#cb10-6" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb10-7"><a href="図示化の練習.html#cb10-7" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;loess&quot;</span>) <span class="sc">+</span></span>
+<span id="cb10-8"><a href="図示化の練習.html#cb10-8" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>(<span class="at">labels =</span> scales<span class="sc">::</span>dollar) <span class="sc">+</span> <span class="co"># ドル表示に変更</span></span>
+<span id="cb10-9"><a href="図示化の練習.html#cb10-9" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>　<span class="co"># 白地罫線に指定</span></span>
+<span id="cb10-10"><a href="図示化の練習.html#cb10-10" tabindex="-1"></a>  <span class="fu">labs_pubr</span>() <span class="sc">+</span>   <span class="co"># 軸タイトルのフォントとサイズを指定</span></span>
+<span id="cb10-11"><a href="図示化の練習.html#cb10-11" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;一人当たりの国内総生産&quot;</span>,</span>
+<span id="cb10-12"><a href="図示化の練習.html#cb10-12" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;平均寿命&quot;</span>)</span></code></pre></div>
+<p><img src="%E4%BF%AE%E5%A3%AB%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+<p>これに全体のデータに対する回帰曲線も描ける。<br>
+ポイントは、aes()をggplot()の中から、個別具体的に指示しているgeom_xx()の中に入れてあげること。図示される順番は先にコードされたものが下、後のものが上に描かれる。</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="図示化の練習.html#cb11-1" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder,</span>
+<span id="cb11-2"><a href="図示化の練習.html#cb11-2" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap,</span>
+<span id="cb11-3"><a href="図示化の練習.html#cb11-3" tabindex="-1"></a>           <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
+<span id="cb11-4"><a href="図示化の練習.html#cb11-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> continent,</span>
+<span id="cb11-5"><a href="図示化の練習.html#cb11-5" tabindex="-1"></a>                  <span class="at">fill =</span> continent)) <span class="sc">+</span></span>
+<span id="cb11-6"><a href="図示化の練習.html#cb11-6" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;loess&quot;</span>,</span>
+<span id="cb11-7"><a href="図示化の練習.html#cb11-7" tabindex="-1"></a>              <span class="fu">aes</span>(<span class="at">color =</span> continent,</span>
+<span id="cb11-8"><a href="図示化の練習.html#cb11-8" tabindex="-1"></a>                  <span class="at">fill =</span> continent)) <span class="sc">+</span></span>
+<span id="cb11-9"><a href="図示化の練習.html#cb11-9" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;loess&quot;</span>,</span>
+<span id="cb11-10"><a href="図示化の練習.html#cb11-10" tabindex="-1"></a>              <span class="at">color =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb11-11"><a href="図示化の練習.html#cb11-11" tabindex="-1"></a>              <span class="at">fill =</span> <span class="st">&quot;grey30&quot;</span>) <span class="sc">+</span></span>
+<span id="cb11-12"><a href="図示化の練習.html#cb11-12" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>(<span class="at">labels =</span> scales<span class="sc">::</span>dollar) <span class="sc">+</span> <span class="co"># ドル表示に変更</span></span>
+<span id="cb11-13"><a href="図示化の練習.html#cb11-13" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>　<span class="co"># 白地罫線に指定</span></span>
+<span id="cb11-14"><a href="図示化の練習.html#cb11-14" tabindex="-1"></a>  <span class="fu">labs_pubr</span>() <span class="sc">+</span>   <span class="co"># 軸タイトルのフォントとサイズを指定</span></span>
+<span id="cb11-15"><a href="図示化の練習.html#cb11-15" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;一人当たりの国内総生産&quot;</span>,</span>
+<span id="cb11-16"><a href="図示化の練習.html#cb11-16" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;平均寿命&quot;</span>)</span></code></pre></div>
+<p><img src="%E4%BF%AE%E5%A3%AB%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+</div>
+<div id="連続値" class="section level4 hasAnchor" number="2.2.1.2">
+<h4><span class="header-section-number">2.2.1.2</span> 連続値<a href="図示化の練習.html#連続値" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>連続値でも色分けして表示できる。</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="図示化の練習.html#cb12-1" tabindex="-1"></a><span class="fu">ggplot</span>(gapminder,</span>
+<span id="cb12-2"><a href="図示化の練習.html#cb12-2" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap,</span>
+<span id="cb12-3"><a href="図示化の練習.html#cb12-3" tabindex="-1"></a>           <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
+<span id="cb12-4"><a href="図示化の練習.html#cb12-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">color =</span> <span class="fu">log</span>(pop))) <span class="sc">+</span></span>
+<span id="cb12-5"><a href="図示化の練習.html#cb12-5" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>(<span class="at">labels =</span> scales<span class="sc">::</span>dollar) <span class="sc">+</span></span>
+<span id="cb12-6"><a href="図示化の練習.html#cb12-6" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>　<span class="co"># 白地罫線に指定</span></span>
+<span id="cb12-7"><a href="図示化の練習.html#cb12-7" tabindex="-1"></a>  <span class="fu">labs_pubr</span>() <span class="sc">+</span>   <span class="co"># 軸タイトルのフォントとサイズを指定</span></span>
+<span id="cb12-8"><a href="図示化の練習.html#cb12-8" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;一人当たりの国内総生産&quot;</span>,</span>
+<span id="cb12-9"><a href="図示化の練習.html#cb12-9" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;平均寿命&quot;</span>)</span></code></pre></div>
+<p><img src="%E4%BF%AE%E5%A3%AB%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto auto auto 0;" /></p>
+</div>
+</div>
+</div>
+<div id="第４章の練習" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> 第４章の練習<a href="図示化の練習.html#第４章の練習" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="rmarkdownの練習.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="q-a.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

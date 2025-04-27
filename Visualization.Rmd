@@ -1,0 +1,228 @@
+# 図示化の練習
+ネットで公開されている[*Data Visualization*](https://socviz.co/index.html)を参考に、Rのggplotを用いた図示化をやってみよう。邦訳本は『データ分析のためのデータ可視化入門』。<br>
+序文、第1章には、なぜ図示化する必要があるのか、図示化する際の注意点が丁寧に書かれているので、読むとよい。
+
+**図示化するにあたって**
+*Data Visualization*の序文に書いてある図示する際に必要となるパッケージをダウンロードしよう。
+
+## 第２章の練習
+### csvファイルの読込み・保存
+＠第２章
+csvファイルとは、カンマ区切りで情報が整理されたファイルのことで、見た目はExcelファイルに近い。
+
+第２章に書かれているcsvファイルを保存してみましょう。
+まず、csvという名前でR Projectと同じレイヤーでフォルダーを作成してください。
+
+```{r, warning=FALSE,message=FALSE}
+# パッケージの読込み
+library(tidyverse)
+library(here)
+
+# 公開されている臓器提供に関するcsvファイルをダウンロード
+## ダウンロードしたcsvに名前を付ける
+url <- "https://cdn.rawgit.com/kjhealy/viz-organdata/master/organdonation.csv"
+
+# csvファイルの読込み
+## 「<-」のショートカットは「alt + -」 
+df_donor <- read_csv(url)
+
+# csvファイルとして保存
+## 書きかた１
+write_csv(df_donor, here("csv", "donor.csv"))
+
+## 書きかた２
+### スラッシュはフォルダーレイヤーを表す。
+### この場合、csvフォルダーの中にdonor.csvを作るように指示
+write_csv(df_donor, "csv/donor.csv")
+
+```
+
+gampminderの読込みがうまくできない場合、R Studioの左下パネルにあるConsoleで<br>
+install.packages("gapminder")<br>
+と入力してから読み込む。
+```{r, warning=FALSE,message=FALSE}
+library(gapminder)
+
+# view関数は無記名の確認したいデータ内容を表示できる
+view(gapminder)
+```
+gapminderは各国の平均寿命やGDP、人口のデータが格納されている。
+
+### 早速図示してみよう！
+
+```{r, warning=FALSE,message=FALSE}
+       # 「data = 」は省略可
+ggplot(gapminder,
+       # 「mapping = 」も省略可
+       aes(x = gdpPercap,
+           y = lifeExp)) +
+  geom_point()
+
+```
+これがデフォルトでの表示。データの傾向を見るだけならば悪くない。
+
+## 第３章の練習
+散布図の上に、散布図に基づいた曲線を当てはめてみよう。
+```{r}
+　　　 # 「data = 」は省略可
+ggplot(gapminder,
+       # 「mapping = 」も省略可
+       aes(x = gdpPercap,
+           y = lifeExp)) +
+  geom_point() +
+  # gam: Generalized Additive Model (GAM)、一般化加法モデル
+  geom_smooth(method = "gam")
+```
+
+散布図と曲線を表示できた。GAMの詳細はとりあえずわからなくて大丈夫。
+
+次にGDPに対数を取って表示してみよう。
+```{r}
+　　　 # 「data = 」は省略可
+ggplot(gapminder,
+       # 「mapping = 」も省略可
+       aes(x = gdpPercap,
+           y = lifeExp)) +
+  geom_point() +
+  # lm: Linear Model (LM)、線形モデル
+  geom_smooth(method = "lm") +
+  scale_x_log10()
+```
+いい感じ。LMの詳細は分からなくて大丈夫。
+
+図を整形してみよう。
+まずは散布図と回帰直線。そして、軸タイトル。
+```{r}
+
+ggplot(gapminder,
+       # 「mapping = 」も省略可
+       aes(x = gdpPercap,
+           y = lifeExp)) +
+  geom_point(alpha = 1.5,         　# 色の濃度指定
+             color = "deepskyblue", # 色指定
+             shape = 4) +　　　　　 # 散布図の記号指定　
+  geom_smooth(method = "lm",           # lm: Linear Model (LM)、線形モデル
+              fill = "lightblue",      # 95%信用区間の色指定
+              color = "deepskyblue",   # 回帰直線の色指定
+              alpha = 0.7,
+              size = 0.5) +　　　　　　# 記号のサイズ指定
+  scale_x_log10(labels = scales::dollar) + # ドル表示に変更
+  labs(x = "一人当たりの国内総生産",
+       y = "平均寿命")
+```
+
+ggpubr（じーじーぱぶあーる）パッケージをダウンロード、読込み、論文形式の図に整形しよう。
+```{r}
+library(ggpubr) # 論文掲載用に設計されたパッケージ
+
+ggplot(gapminder,
+       # 「mapping = 」も省略可
+       aes(x = gdpPercap,
+           y = lifeExp)) +
+  geom_point(alpha = 1.5,         　# 色の濃度指定
+             color = "deepskyblue", # 色指定
+             shape = 4) +　　　　　 # 散布図の記号指定　
+  geom_smooth(method = "lm",           # lm: Linear Model (LM)、線形モデル
+              fill = "lightblue",      # 95%信用区間の色指定
+              color = "deepskyblue",   # 回帰直線の色指定
+              alpha = 0.7,
+              size = 0.5) +　　　　　　# 記号のサイズ指定
+  scale_x_log10(labels = scales::dollar) + # ドル表示に変更
+  theme_pubr() +　# 無地背景に指定
+  labs_pubr() +   # 軸タイトルのフォントとサイズを指定
+  labs(x = "一人当たりの国内総生産",
+       y = "平均寿命")
+```
+結構、論文形式ぽくなった。個人的には、補助線が欲しいので、theme_pubr()からtheme_bw()に変更する。
+
+```{r}
+ggplot(gapminder,
+       # 「mapping = 」も省略可
+       aes(x = gdpPercap,
+           y = lifeExp)) +
+  geom_point(alpha = 1.5,         　# 色の濃度指定
+             color = "deepskyblue", # 色指定
+             shape = 4) +　　　　　 # 散布図の記号指定　
+  geom_smooth(method = "lm",           # lm: Linear Model (LM)、線形モデル
+              fill = "lightblue",      # 95%信用区間の色指定
+              color = "deepskyblue",   # 回帰直線の色指定
+              alpha = 0.7,
+              size = 0.5) +　　　　　　# 記号のサイズ指定
+  scale_x_log10(labels = scales::dollar) + # ドル表示に変更
+  theme_bw() +　# 白地罫線に指定
+  labs_pubr() +   # 軸タイトルのフォントとサイズを指定
+  labs(x = "一人当たりの国内総生産",
+       y = "平均寿命") -> p2_1
+```
+
+### グループ分けして図示
+#### 離散値
+実はこれまでの図は、ちがうデータを一色淡にして表示していた。これを大陸ごとに分けて表示するとどうなるだろう。
+```{r}
+ggplot(gapminder,
+       aes(x = gdpPercap,
+           y = lifeExp,
+           color = continent,
+           fill = continent)) + 
+  geom_point() +
+  geom_smooth(method = "loess") +
+  scale_x_log10(labels = scales::dollar) + # ドル表示に変更
+  theme_bw() +　# 白地罫線に指定
+  labs_pubr() +   # 軸タイトルのフォントとサイズを指定
+  labs(x = "一人当たりの国内総生産",
+       y = "平均寿命")
+```
+
+これに全体のデータに対する回帰曲線も描ける。<br>
+ポイントは、aes()をggplot()の中から、個別具体的に指示しているgeom_xx()の中に入れてあげること。図示される順番は先にコードされたものが下、後のものが上に描かれる。
+```{r}
+ggplot(gapminder,
+       aes(x = gdpPercap,
+           y = lifeExp)) +
+  geom_point(aes(color = continent,
+                  fill = continent)) +
+  geom_smooth(method = "loess",
+              aes(color = continent,
+                  fill = continent)) +
+  geom_smooth(method = "loess",
+              color = "black",
+              fill = "grey30") +
+  scale_x_log10(labels = scales::dollar) + # ドル表示に変更
+  theme_bw() +　# 白地罫線に指定
+  labs_pubr() +   # 軸タイトルのフォントとサイズを指定
+  labs(x = "一人当たりの国内総生産",
+       y = "平均寿命")
+```
+
+#### 連続値
+連続値でも色分けして表示できる。
+```{r}
+ggplot(gapminder,
+       aes(x = gdpPercap,
+           y = lifeExp)) +
+  geom_point(mapping = aes(color = log(pop))) +
+  scale_x_log10(labels = scales::dollar) +
+  theme_bw() +　# 白地罫線に指定
+  labs_pubr() +   # 軸タイトルのフォントとサイズを指定
+  labs(x = "一人当たりの国内総生産",
+       y = "平均寿命") 
+```
+
+### 図を保存する
+```{r}
+library(here)
+
+## 書きかた１
+ggsave(p2_1, file = "Figures/p2_1.png",
+       width = 300, height = 150, units = "mm")
+
+## 書きかた２
+ggsave(here("Figures", "p2_1.png"),
+       width = 300, height = 150, units = "mm")
+
+```
+
+
+## 第４章の練習
+
+

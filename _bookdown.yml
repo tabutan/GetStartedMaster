@@ -2,6 +2,7 @@ book_filename: "修士のススメ"
 rmd_files:                    
   - index.Rmd
   - training.Rmd
+  - Visualization.Rmd
   - QuestionAnswer.Rmd
   - Appendix.Rmd
   - sessioninfo.Rmd

@@ -8,3 +8,6 @@ dplyr
 stringr
 forcats
 lubridate
+here
+gapminder
+ggpubr

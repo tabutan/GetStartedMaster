@@ -1,4 +1,6 @@
-# トレーニング
+# Rmarkdownの練習
+Rmarkdownを使うにあたって、実用性が高い書きかたを紹介する。
+
 ## デスクトップにフォルダーを作る
 マイクロソフトなどのクラウドと同期されていると、Rの挙動に予期せぬバグが生じることがある。まずは同期されていないことを確認し、されている場合は、切断しよう。
 
@@ -186,7 +188,11 @@ $N_a$、$N^a$、$N_{修士のススメ参加者}=7$
 
 ニホンザルの研究はいろいろある [@hamada1992; @hikida2022]
 
-おっと、Hikida 2022の引用文献に問題発生。
+#### よくある引用トラブル1
+1.1. タイトルで大文字にしたいところが小文字に<br>
+1.2. タイトルで書いている種名がイタリックになっていない
+
+Hikida 2022の引用文献を例に見てみよう。
 Japanese macaquesにすべきところをjapanese macaquesと表示されているし、種名がイタリックになっていない！
 
 **対処法**
@@ -207,6 +213,46 @@ title = {xxxxxxx}になっているところをtitle ={{xxxxx}}に変更して�
 
 イタリックにしたい箇所であるMacaca fuscataを\\textit{Macaca fuscata}というように書いてみよう。種名がイタリックになっているはず。
 HP上は￥のマークになっているが、Ｒコード上はバックスラッシュであることに注意。
+
+#### よくある引用トラブル2
+引用する論文のタイトルに数学的記号があると、大抵の論文管理ソフトや論文検索ソフトではタイトル通りに表示されない。この場合、数学的記号を文中で表示させる記法である\$で囲う方法で解決する。<br>
+例えば、@vehtari2021 を見てみよう。
+
+$\hat{R}$と表示したいにもかかわらず、R＾と表示されてしまっている。
+
+> \@article{vehtari2021,<br>
+   author = {Vehtari, Aki and Gelman, Andrew and Simpson, Daniel and Carpenter, Bob and Bürkner, Paul-Christian},<br>
+   title = {Rank-Normalization, Folding, and Localization: An Improved Rˆ for Assessing Convergence of MCMC (with Discussion)},
+
+この場合、titleの中の「Rˆ」を「\$\\hat{R}」とすると$\hat{R}$と正しく表示される。
+
+
+## 引用文献スタイルを変更する
+論文投稿するとなったとき、手作業だと困ることは引用文献スタイルの設定である。<br>
+例えば、<br>
+
+- APAスタイル
+- MLAスタイル
+- シカゴスタイル
+- バンク―バスタイル
+
+
+がある。これらは、引用する論文の書誌情報の書きかたや順番がビッミョーーーーーにちがう！手作業ではやってられない！<br>
+具体的に見てみると、APAだと<br>
+
+>Hikida, K. (2022). Eyeblink rate as an indicator of concentration on grooming in Japanese macaques (*Macaca fuscata*). American Journal of Primatology, 84(7), e23392.
+
+であるが、MLAだと<br>
+
+>Hikida, Kenichiro. "Eyeblink rate as an indicator of concentration on grooming in Japanese macaques (*Macaca fuscata*)." American Journal of Primatology 84.7 (2022): e23392.
+
+となる。以下に直すのが面倒臭いかがわかるだろう。<br>
+そこで役に立つのが、[Zotero Style Repository](https://www.zotero.org/styles)。
+
+ここのサイトでは、投稿先の引用文献スタイルを書くためのcslファイルが登録されている。
+例えば、*Science*誌、*Proceedings of the Royal Society B*誌、*American Journal of Primatology*誌を検索してダウンロードし、R Projectと同じレイヤーに置いてみよう。
+
+index.Rmdを表示し、一番上の\-\-\-で囲っている中にcslと書いてある箇所があるはず。そこで、さきほどダウンロードした３つの学術雑誌のcslファイル名を一つずつ順番に変えて、Build Bookしてみよう。学術雑誌に合わせた引用のされ方と引用文献リストが瞬時に変更されているはずだ。
 
 
 ## Rコードを書く
